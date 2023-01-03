@@ -1,0 +1,24 @@
+[package]
+name = "base64tool"
+version = "0.1.0"
+edition = "2021"
+description = "Base64 encode and decode files"
+homepage = "https://github.com/Firstyear/base64tool"
+repostiory = "https://github.com/Firstyear/base64tool"
+readme = "README.md"
+keywords = ["base64", "encode", "decode", "b64"]
+categories = ["command-line-utilities"]
+license = "MPL-2.0"
+
+[[bin]]
+name = "b64encode"
+path = "src/encode.rs"
+
+[[bin]]
+name = "b64decode"
+path = "src/decode.rs"
+
+[dependencies]
+base64 = "0.20"
+clap = { version = "4.0.32", features = ["derive"] }
+
