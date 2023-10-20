@@ -1,6 +1,6 @@
 [package]
 name = "base64tool"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Base64 encode and decode files"
 homepage = "https://github.com/Firstyear/base64tool"
@@ -19,6 +19,6 @@ name = "b64decode"
 path = "src/decode.rs"
 
 [dependencies]
-base64 = "0.20"
+base64 = "0.21"
 clap = { version = "4.0.32", features = ["derive"] }
 

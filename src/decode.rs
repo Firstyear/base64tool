@@ -49,7 +49,8 @@ fn main() {
         return;
     };
 
-    let mut enc = base64::read::DecoderReader::from(file_input, &base64::engine::DEFAULT_ENGINE);
+    let mut enc =
+        base64::read::DecoderReader::new(file_input, &base64::engine::general_purpose::STANDARD);
 
     // handle errors as you normally would
     if let Err(e) = std::io::copy(&mut enc, &mut file_output) {

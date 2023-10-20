@@ -49,7 +49,8 @@ fn main() {
         return;
     };
 
-    let mut enc = base64::write::EncoderWriter::from(file_output, &base64::engine::DEFAULT_ENGINE);
+    let mut enc =
+        base64::write::EncoderWriter::new(file_output, &base64::engine::general_purpose::STANDARD);
 
     // handle errors as you normally would
     if let Err(e) = std::io::copy(&mut file_input, &mut enc) {
